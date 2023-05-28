@@ -192,28 +192,12 @@ def get_raw_data(df):
     Stops if the answer is 'no'.
     """
     # defining 'a' and 'b' to display the raw data as chunks of 5 lines for each iteration
-    a = 0
-    b = 5
-    while True:
-        try:
-            qa_data = input("Do you want to see the next 5 lines of raw data? Enter 'yes' or 'no': ")
-        # ask for restart if user press ctrl+c
-        except KeyboardInterrupt:
-            restart_qa = input("Would you like to restart? Enter yes or no: ")
-            if restart_qa == 'yes':
-                continue
-            else:
-                exit()
-        if qa_data == 'yes':
-            print(df[a:b])
-            a += 5
-            b += 5
-            continue
-        elif qa_data == 'no':
+   while True:
+        display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+        if display_data.lower() != 'yes':
             break
-        else:
-            print("That's not a valid input. Please try again.")
-            continue
+        print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers='keys'))
+        i+=5
 
 def main():
     while True:
