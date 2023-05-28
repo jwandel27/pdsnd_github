@@ -39,3 +39,6 @@ https://www.youtube.com/watch?v=XW3p9iD3qMo
 * Research how to filter the most unpopular start- & endstation: 
 https://stackoverflow.com/questions/49966675/pandas-least-frequent-value-in-column
 
+* Another source for research:
+https://stackoverflow.com/questions/19632728/how-do-i-get-a-python-program-to-do-nothing
+
